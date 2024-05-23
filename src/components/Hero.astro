@@ -3,11 +3,11 @@
     <img src="Images/Bild1.jpg" alt="My Image">
 </div>
 <div class="hero-text">
-    <h2>Hi,ich bin</h2>
+    <h2 class="color-accent">Hi,ich bin</h2>
     <h1>Faruk Okcu</h1>
-    <h3>Developer; Administrator; Gamer</h3>
+    <h3 class="color-primary">Developer; Administrator; Gamer</h3>
     <p>
-       Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos corporis eligendi voluptate iusto tenetur vel, placeat quis, odio rerum soluta, excepturi quasi sint facere iste consectetur molestiae doloremque porro! Similique illo mollitia et earum enim. Laudantium maiores tenetur voluptates enim, ex eaque ullam odit.
+        Als angehender zukünftiger Systemintegrator der eine starken Willen besitzt, hochqualifiziert an seinen Zielen arbeitet und immer lösungsorientiert denkt, was für mich als Fachinformatiker selbstverständlich ist. Dank meiner Offenheit und ausgeprägten Sozialen Kompetenzen gelingt es mir sehr gut, ein tiefes Vertrauensverhältnis aufzubauen, was die Basis für eine erfolgreiche Zusammenarbeit ist.
     </p>
 </div>
 
@@ -38,6 +38,8 @@
     }
     .hero .hero-text {
         width: 50%;
+        justify-content: center;
+        align-items: center;
     }
     .hero-text p {
         margin-top: 1rem;
@@ -45,14 +47,21 @@
         background-color: rgba(0,0,0,0.3);
         border-radius: 15px;
         padding: 1rem;
+        max-width: 40ch;
     }
     .hero-text p::before {
         color: fuchsia;
-        content: '"';
+        content: '“';
     }
     .hero-text p::after {
         color: fuchsia;
-        content: '"';
+        content: '”';
+    }
+    .color-accent {
+        color: var(--color-accent);
+    }
+    .color-primary {
+        color: var(--color-primary);
     }
     /* @media screen and (max-width: 821px) {
         .hero {
