@@ -1,0 +1,63 @@
+<div class="hero">
+<div class="hero-image">
+    <img src="Images/Bild1.jpg" alt="My Image">
+</div>
+<div class="hero-text">
+    <h2>Hi,ich bin</h2>
+    <h1>Faruk Okcu</h1>
+    <h3>Developer; Administrator; Gamer</h3>
+    <p>
+       Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos corporis eligendi voluptate iusto tenetur vel, placeat quis, odio rerum soluta, excepturi quasi sint facere iste consectetur molestiae doloremque porro! Similique illo mollitia et earum enim. Laudantium maiores tenetur voluptates enim, ex eaque ullam odit.
+    </p>
+</div>
+
+
+<style>
+    .hero {
+        display: flex;
+        width: 100%;
+        flex-direction: row-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+    .hero-text > * {
+        text-align: center;
+        margin-bottom: 0.5rem;
+        margin-top: 0;
+    }
+    .hero .hero-image {
+        height: 800px;
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .hero-image img {
+        max-height: 100%;
+        max-width: 100%;
+    }
+    .hero .hero-text {
+        width: 50%;
+    }
+    .hero-text p {
+        margin-top: 1rem;
+        border: 1px solid rgb(62, 62, 62);
+        background-color: rgba(0,0,0,0.3);
+        border-radius: 15px;
+        padding: 1rem;
+    }
+    .hero-text p::before {
+        color: fuchsia;
+        content: '"';
+    }
+    .hero-text p::after {
+        color: fuchsia;
+        content: '"';
+    }
+    /* @media screen and (max-width: 821px) {
+        .hero {
+            flex-direction: column;
+        }
+    } */
+
+</style>
