@@ -9,7 +9,23 @@ import Progress from '../components/Progress.astro';
         <Hero />
     </section>
     <section id="skills"></section>
-        <Progress />
+        <div class="skills-list">
+        <Progress titel="HTML" progress="20" color="red"/>
+        <Progress titel="CSS" progress="40" color="blue"/>
+        <Progress titel="JavaSkript" progress="60" color="orange"/>
+        <Progress titel="Vibes" progress="90" color="fuchsia"/>    
+        </div>
+        </section>
     <section id="timeline"></section>
     <section id="projekts"></section>
 </Layout>
+
+<style>
+    .skills-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+    }
+</style>
