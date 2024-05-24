@@ -1,0 +1,108 @@
+<ul class="timeline-items">
+    <li class="timeline-item">
+        <div class="timeline-dot"></div>
+        <span class="timeline-date">2014</span>
+        <div class="timeline-content">
+            <h3>Realschulabschluss</h3>
+            <p>Linux; Gaming; Orientierungssuche;</p>
+        </div>
+    </li>
+    <li class="timeline-item">
+        <div class="timeline-dot"></div>
+        <span class="timeline-date">2014-2015</span>
+        <div class="timeline-content">
+            <h3>FSJ beim ASB</h3>
+            <p>Freiwilliges Soziales Jahr beim Arbeiter-Samariter-Bund</p>
+        </div>
+    </li>
+    <li class="timeline-item">
+        <div class="timeline-dot"></div>
+        <span class="timeline-date">2015-2020</span>
+        <div class="timeline-content">
+            <h3>Ausbildung und Übernahme: Fachkraft für Lebensmitteltechnik</h3>
+            <p>Abgeschlossene Berufsausbildung zur Fachkraft für
+                Lebensmitteltechnik bei Kaufland Fleischwaren im Jahr 2018, mit
+                anschließender Übernahme</p>
+        </div>
+    </li>
+    <li class="timeline-item">
+        <div class="timeline-dot"></div>
+        <span class="timeline-date">2020-2024</span>
+        <div class="timeline-content">
+            <h3>Umschulung und Übernahme als Trainer für Fachinformatiker</h3>
+            <p>Übernahme nach Praktikum als IT-Trainer bei Lutz & Grub:
+                Academy™️. Schwerpunkt auf Webentwicklung, Linux und UML.</p>
+        </div>
+    </li>
+</ul>
+
+<style>
+    ul.timeline-items {
+        max-width: 1300px;
+        display: flex;
+        flex-wrap: wrap;
+        position: relative;
+        list-style: none;
+        padding: 0;
+    }
+    ul.timeline-items::before {
+        content: "";
+        position: absolute;
+        width: 5px;
+        height: 100%;
+        background-color: var(--color-accent);
+        left: calc(50% + 15px);
+    }
+    ul.timeline-items li {
+        width: 100%;
+        position: relative;
+        margin-bottom: 10px;
+    }
+    ul.timeline-items li:nth-child(odd) {
+        padding-right: 50%;
+        text-align: end;
+    }
+    ul.timeline-items li:nth-child(even) {
+        padding-left: calc(50% + 35px);
+    }
+    li.timeline-item .timeline-dot {
+        position: absolute;
+        height: 24px;
+        width: 24px;
+        background-color: var(--color-accent);
+        border-radius: 50%;
+        right: calc(50% - 30px);
+        box-shadow: 0 0 25px var(--color-accent);
+    }
+    li.timeline-item .timeline-date {
+        font-size: 20px;
+        font-weight: 800;
+        margin: 10px 20px;
+        display: inline-block;
+        line-height: 1rem;
+    }
+    li.timeline-item .timeline-content {
+        border: 3px solid var(--color-accent);
+        border-radius: 75px;
+        padding: 10px 40px;
+        background-color: var(--color-bg);
+        box-shadow: 0 0 10px var(--color-accent);
+        cursor: pointer;
+        margin-inline: 15px;
+        transition: all .3s ease;
+    }
+    li.timeline-item .timeline-content:hover {
+        box-shadow: 0 0 25px var(--color-accent);
+        transform: scale(1.05);
+    }
+    .timeline-content h3 {
+        font-size: 18px;
+        font-weight: 700;
+        margin: 0 0 5px 0;
+    }
+    .timeline-content p {
+        font-size: 16px;
+        font-weight: 300;
+        margin: 0 0 10px 0;
+    }
+</style>

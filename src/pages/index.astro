@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import Hero from '../components/Hero.astro';
 import Progress from '../components/Progress.astro';
+import Timeline from '../components/Timeline.astro';
 ---
 
 <Layout title="Welcome to Astro.">
@@ -16,7 +17,9 @@ import Progress from '../components/Progress.astro';
         <Progress titel="Vibes" progress="90" color="fuchsia"/>    
         </div>
         </section>
-    <section id="timeline"></section>
+    <section id="timeline">
+        <Timeline />
+    </section>
     <section id="projekts"></section>
 </Layout>
 
