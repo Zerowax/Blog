@@ -1,34 +1,35 @@
 ---
-import Layout from '../layouts/Layout.astro';
 import Hero from '../components/Hero.astro';
 import Progress from '../components/Progress.astro';
 import Timeline from '../components/Timeline.astro';
+import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="Welcome to Astro.">
-    <section id="hero">
-        <Hero />
-    </section>
-    <section id="skills"></section>
-        <div class="skills-list">
-        <Progress titel="HTML" progress="20" color="red"/>
-        <Progress titel="CSS" progress="40" color="blue"/>
-        <Progress titel="JavaSkript" progress="60" color="orange"/>
-        <Progress titel="Vibes" progress="90" color="fuchsia"/>    
-        </div>
-        </section>
-    <section id="timeline">
-        <Timeline />
-    </section>
-    <section id="projekts"></section>
+	<section id="hero">
+		<Hero />
+	</section>
+	<section id="skills">
+		<div class="skills-list">
+			<Progress title="HTML" progress="20" color='red' />
+			<Progress title="CSS" progress="30" color='blue' />
+			<Progress title="JavaScript" progress='20' color='orange' />
+			<Progress title='Vibes' progress='90' color='fuchsia' />
+		</div>
+	</section>
+	<section id="timeline">
+		<Timeline />
+	</section>
+	<section id="projects"></section>
 </Layout>
 
 <style>
-    .skills-list {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-        gap: 2rem;
-    }
+	.skills-list {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+		gap: 2rem;
+		min-width: 600px;
+	}
 </style>

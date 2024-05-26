@@ -17,20 +17,26 @@ const { title } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body>
-		<nav></nav>
+		<nav>
+			<ul>
+				<li><a href="#hero">Home</a></li>
+				<li><a href="#skills">Skills</a></li>
+				<li><a href="#timeline">Lebenslauf</a></li>
+				<li><a href="#projects">Projects</a></li>
+			</ul>
+		</nav>
 		<main>
-				<slot />
-
+			<slot />
 		</main>
 		<footer></footer>
 	</body>
 </html>
 <style is:global>
 	:root {
-		--color-primary: rgb(200,0,200);
-		--color-accent: rgb(200,0,150);
+		--color-primary: rgb(160, 30, 255);
+		--color-accent: rgb(255, 0, 191);
 		--color-bg: rgb(30, 40, 50);
-		
+
 		--accent: 136, 58, 234;
 		--accent-light: 224, 204, 250;
 		--accent-dark: 49, 10, 101;
@@ -45,7 +51,11 @@ const { title } = Astro.props;
 		font-family: system-ui, sans-serif;
 		background: #13151a;
 		background-size: 224px;
-		color:aliceblue
+		color: #fefefe;
+	}
+	body {
+		margin: 0;
+		padding: 0;
 	}
 	code {
 		font-family:
@@ -57,5 +67,57 @@ const { title } = Astro.props;
 			Bitstream Vera Sans Mono,
 			Courier New,
 			monospace;
+	}
+	nav {
+		position: absolute;
+		width: 100vw;
+		height: 5vh;
+		padding: 2rem;
+		background-color: rgba(0,0,0,.5);
+		display: flex;
+		z-index: 10;
+		box-sizing: border-box;
+	}
+	nav ul {
+		display: flex;
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		align-items: center;
+	}
+	nav ul li {
+		margin-right: 1rem;
+	}
+	nav ul li:not(:last-child)::after {
+		content: " |";
+		margin-left: 1rem;
+		color: var(--color-primary);
+	}
+	nav ul li a {
+		color: var(--color-primary);
+		text-decoration: none;
+		font-size: 1.2em;
+		text-shadow: 0 0 2px var(--color-primary);
+		transition: all .5s ease;
+	}
+	nav ul li a:hover {
+		color: var(--color-accent);
+		text-shadow: 0 0 10px var(--color-accent);
+	}
+	main {
+		position: fixed;
+		overflow: scroll;
+		scroll-behavior: smooth;
+		scroll-snap-type: y mandatory;
+		height: 100vh;
+		width: 100%;
+	}
+	section {
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		scroll-snap-align: center;
 	}
 </style>
